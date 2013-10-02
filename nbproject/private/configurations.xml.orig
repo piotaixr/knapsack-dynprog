@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="89">
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="dbg" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -rH  /home/nell/stage/sac-a-dos/KP_UNCORRELATED_5000_1</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -rH  /home/nell/stage/sac-a-dos/KP_WEAKLY_CORRELATED_5000_5</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -rH  /home/nell/stage/sac-a-dos/instances/KP_1_*</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -rH  /home/nell/stage/sac-a-dos/instances/KP_UNCORRELATED_10000_1</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -rH  /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_*</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -r  /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_*</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -r  /home/nell/stage/sac-a-dos/instances/KP_SUBSET_SUM_10000_31</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -r  /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_100000_0.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -rc  /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_100000_0.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>optirun "${OUTPUT_PATH}" -c  /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_100000_0.txt</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>optirun "${OUTPUT_PATH}" -c  /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_100000_0.txt</runcommand>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+          <variable name="LD_LIBRARY_PATH"
+                    value="/opt/boost_1_53_0/stage/lib:/opt/cuda/lib64"/>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="rel" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" KP_5</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" KP_10</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_1.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_2.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_0.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -rc /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_0.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>optirun "${OUTPUT_PATH}" -rc /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_0.txt</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>optirun "${OUTPUT_PATH}" -rc /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_0.txt</runcommand>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="rel_nocuda" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" KP_5</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" KP_10</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_1.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_2.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_0.txt</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}" /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_0.txt</runcommand>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="dbg_nocuda" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" KP_5</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" KP_10</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_1.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_2.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_0.txt</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}" /home/nell/stage/sac-a-dos/instances/boyer_el_baz/KP_10000_0.txt</runcommand>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

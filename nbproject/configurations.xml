@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="89">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="f2" displayName="Algorithm" projectFiles="true">
+        <itemPath>AbstractKnapsackAlgorithm.h</itemPath>
+        <itemPath>CudaAcceleratedAlgorithm.cu.h</itemPath>
+        <itemPath>MatrixAlgorithm.h</itemPath>
+        <itemPath>SwapVectorsAlgorithm.h</itemPath>
+        <itemPath>ThrustAlgorithm.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="EventDispatcher" projectFiles="true">
+        <itemPath>BaseEvent.h</itemPath>
+        <itemPath>BenchmarkPrinter.h</itemPath>
+        <itemPath>DispatcherCreator.h</itemPath>
+        <itemPath>Event.h</itemPath>
+        <itemPath>EventDispatcher.h</itemPath>
+        <itemPath>EventListener.h</itemPath>
+        <itemPath>InstanceReducer.h</itemPath>
+        <itemPath>ResultPrinter.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f4" displayName="Exception" projectFiles="true">
+        <itemPath>InstanceException.h</itemPath>
+        <itemPath>InvalidFilenameException.h</itemPath>
+        <itemPath>OptimalSolutionFoundException.h</itemPath>
+        <itemPath>ResizableProblemInfeasibleException.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f5" displayName="Loader" projectFiles="true">
+        <itemPath>ChainLoader.h</itemPath>
+        <itemPath>FileLoader.h</itemPath>
+        <itemPath>InstanceLoader.h</itemPath>
+        <itemPath>StreamLoader.h</itemPath>
+      </logicalFolder>
+      <itemPath>Counter.h</itemPath>
+      <itemPath>Instance.h</itemPath>
+      <itemPath>Object.h</itemPath>
+      <itemPath>ResizedInstance.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f2" displayName="Algorithm" projectFiles="true">
+        <itemPath>AbstractKnapsackAlgorithm.tpp</itemPath>
+        <itemPath>CudaAcceleratedAlgorithm.cu</itemPath>
+        <itemPath>MatrixAlgorithm.tpp</itemPath>
+        <itemPath>SwapVectorsAlgorithm.tpp</itemPath>
+        <itemPath>ThrustAlgorithm.tpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="EventDispatcher" projectFiles="true">
+        <itemPath>BaseEvent.cpp</itemPath>
+        <itemPath>BenchmarkPrinter.tpp</itemPath>
+        <itemPath>DispatcherCreator.cpp</itemPath>
+        <itemPath>Event.tpp</itemPath>
+        <itemPath>EventDispatcher.tpp</itemPath>
+        <itemPath>EventListener.tpp</itemPath>
+        <itemPath>InstanceReducer.tpp</itemPath>
+        <itemPath>ResultPrinter.tpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f4" displayName="Exception" projectFiles="true">
+        <itemPath>InstanceException.tpp</itemPath>
+        <itemPath>InvalidFilenameException.cpp</itemPath>
+        <itemPath>OptimalSolutionFoundException.tpp</itemPath>
+        <itemPath>ResizableProblemInfeasibleException.tpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f5" displayName="Loader" projectFiles="true">
+        <itemPath>ChainLoader.tpp</itemPath>
+        <itemPath>FileLoader.tpp</itemPath>
+        <itemPath>InstanceLoader.tpp</itemPath>
+        <itemPath>StreamLoader.tpp</itemPath>
+      </logicalFolder>
+      <itemPath>Counter.cpp</itemPath>
+      <itemPath>Instance.tpp</itemPath>
+      <itemPath>Object.tpp</itemPath>
+      <itemPath>ResizedInstance.tpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+      <itemPath>main.cu</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="dbg" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>true</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>3</standard>
+        </cTool>
+        <ccTool>
+          <standard>4</standard>
+          <commandlineTool>g++</commandlineTool>
+          <commandLine>-fopenmp -march=native</commandLine>
+          <useLinkerLibraries>false</useLinkerLibraries>
+        </ccTool>
+        <fortranCompilerTool>
+          <commandlineTool>nvcc</commandlineTool>
+        </fortranCompilerTool>
+        <linkerTool>
+          <additionalDep>${OBJECTDIR}/main.o</additionalDep>
+          <linkerLibItems>
+            <linkerOptionItem>-lboost_program_options</linkerOptionItem>
+            <linkerOptionItem>-lboost_filesystem</linkerOptionItem>
+            <linkerOptionItem>-lboost_system</linkerOptionItem>
+            <linkerOptionItem>-lcudart</linkerOptionItem>
+            <linkerOptionItem>-lboost_regex</linkerOptionItem>
+          </linkerLibItems>
+          <commandLine>-fopenmp ${OBJECTDIR}/main.o</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="AbstractKnapsackAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BaseEvent.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BaseEvent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BenchmarkPrinter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChainLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Counter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Counter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CudaAcceleratedAlgorithm.cu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DispatcherCreator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DispatcherCreator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Event.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EventDispatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EventListener.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instance.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InstanceException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InstanceLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InstanceReducer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InvalidFilenameException.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="InvalidFilenameException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MatrixAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Object.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OptimalSolutionFoundException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ResizableProblemInfeasibleException.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ResizedInstance.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ResultPrinter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StreamLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SwapVectorsAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ThrustAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="true" tool="3" flavor2="0">
+        <customTool>
+          <customToolCommandline>nvcc -c -g -Xcompiler -MMD -Xcompiler -MP -Xcompiler "-MF build/dbg/GNU-Linux-x86/BaseEvent.o.d" -o ${OBJECTDIR}/main.o main.cpp</customToolCommandline>
+          <customToolOutputs>${OBJECTDIR}/main.o</customToolOutputs>
+          <customToolAdditionalDep>${OBJECTDIR}/kernels.o</customToolAdditionalDep>
+        </customTool>
+      </item>
+      <item path="main.cu" ex="false" tool="3" flavor2="0">
+        <customTool>
+          <customToolCommandline>nvcc -c -g -o ${OBJECTDIR}/main.o main.cu -Xcompiler -fopenmp --ptxas-options=-v -arch=sm_21 -Xcompiler -march=native</customToolCommandline>
+          <customToolOutputs>${OBJECTDIR}/main.o</customToolOutputs>
+        </customTool>
+      </item>
+    </conf>
+    <conf name="rel" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>6</developmentMode>
+          <standard>3</standard>
+          <warningLevel>3</warningLevel>
+        </cTool>
+        <ccTool>
+          <developmentMode>6</developmentMode>
+          <stripSymbols>true</stripSymbols>
+          <standard>4</standard>
+          <commandlineTool>g++</commandlineTool>
+          <commandLine>-fopenmp -march=native</commandLine>
+          <warningLevel>3</warningLevel>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>6</developmentMode>
+          <commandlineTool>nvcc</commandlineTool>
+        </fortranCompilerTool>
+        <linkerTool>
+          <stripSymbols>true</stripSymbols>
+          <additionalDep>${OBJECTDIR}/main.o</additionalDep>
+          <linkerLibItems>
+            <linkerOptionItem>-lboost_program_options</linkerOptionItem>
+            <linkerOptionItem>-lboost_filesystem</linkerOptionItem>
+            <linkerOptionItem>-lboost_system</linkerOptionItem>
+            <linkerOptionItem>-lcudart</linkerOptionItem>
+            <linkerOptionItem>-lboost_regex</linkerOptionItem>
+          </linkerLibItems>
+          <commandLine>-fopenmp ${OBJECTDIR}/main.o</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="AbstractKnapsackAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BaseEvent.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BaseEvent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BenchmarkPrinter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChainLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Counter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Counter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CudaAcceleratedAlgorithm.cu" ex="true" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>-I../dynprogBaseTypes/include</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="CudaAcceleratedAlgorithm.cu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DispatcherCreator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DispatcherCreator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Event.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EventDispatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EventListener.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instance.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InstanceException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InstanceLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InstanceReducer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InvalidFilenameException.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="InvalidFilenameException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MatrixAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Object.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OptimalSolutionFoundException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ResizableProblemInfeasibleException.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ResizedInstance.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ResultPrinter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StreamLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SwapVectorsAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ThrustAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="true" tool="3" flavor2="0">
+        <customTool>
+          <customToolCommandline>nvcc -O3 -c -g -Xcompiler -fopenmp -Xcompiler -MMD -Xcompiler -MP -Xcompiler "-MF build/dbg/GNU-Linux-x86/BaseEvent.o.d" -o ${OBJECTDIR}/main.o main.cpp</customToolCommandline>
+          <customToolOutputs>${OBJECTDIR}/main.o</customToolOutputs>
+          <customToolAdditionalDep>${OBJECTDIR}/kernels.o</customToolAdditionalDep>
+        </customTool>
+      </item>
+      <item path="main.cu" ex="false" tool="3" flavor2="0">
+        <customTool>
+          <customToolCommandline>nvcc -O3 -c -g -o ${OBJECTDIR}/main.o main.cu -Xcompiler -fopenmp --ptxas-options=-v -arch=sm_21 -Xcompiler -march=native
+</customToolCommandline>
+          <customToolOutputs>${OBJECTDIR}/main.o</customToolOutputs>
+        </customTool>
+      </item>
+    </conf>
+    <conf name="rel_nocuda" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>6</developmentMode>
+          <stripSymbols>true</stripSymbols>
+          <standard>3</standard>
+          <warningLevel>3</warningLevel>
+        </cTool>
+        <ccTool>
+          <developmentMode>6</developmentMode>
+          <stripSymbols>true</stripSymbols>
+          <standard>4</standard>
+          <commandlineTool>g++</commandlineTool>
+          <commandLine>-fopenmp -march=native</commandLine>
+          <preprocessorList>
+            <Elem>KP_NOCUDA</Elem>
+          </preprocessorList>
+          <warningLevel>3</warningLevel>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>6</developmentMode>
+          <commandlineTool>nvcc</commandlineTool>
+        </fortranCompilerTool>
+        <linkerTool>
+          <stripSymbols>true</stripSymbols>
+          <additionalDep>${OBJECTDIR}/main.o</additionalDep>
+          <commandlineTool>g++</commandlineTool>
+          <linkerLibItems>
+            <linkerOptionItem>-lboost_program_options</linkerOptionItem>
+            <linkerOptionItem>-lboost_filesystem</linkerOptionItem>
+            <linkerOptionItem>-lboost_system</linkerOptionItem>
+            <linkerOptionItem>-lboost_regex</linkerOptionItem>
+          </linkerLibItems>
+          <commandLine>-fopenmp</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="AbstractKnapsackAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BaseEvent.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BaseEvent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BenchmarkPrinter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChainLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Counter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Counter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CudaAcceleratedAlgorithm.cu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DispatcherCreator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DispatcherCreator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Event.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EventDispatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EventListener.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instance.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InstanceException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InstanceLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InstanceReducer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InvalidFilenameException.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="InvalidFilenameException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MatrixAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Object.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OptimalSolutionFoundException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ResizableProblemInfeasibleException.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ResizedInstance.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ResultPrinter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StreamLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SwapVectorsAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ThrustAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="dbg_nocuda" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>3</standard>
+        </cTool>
+        <ccTool>
+          <standard>4</standard>
+          <commandlineTool>g++</commandlineTool>
+          <commandLine>-fopenmp -march=native</commandLine>
+          <preprocessorList>
+            <Elem>KP_NOCUDA</Elem>
+          </preprocessorList>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>6</developmentMode>
+          <commandlineTool>nvcc</commandlineTool>
+        </fortranCompilerTool>
+        <linkerTool>
+          <commandlineTool>g++</commandlineTool>
+          <linkerLibItems>
+            <linkerOptionItem>-lboost_program_options</linkerOptionItem>
+            <linkerOptionItem>-lboost_filesystem</linkerOptionItem>
+            <linkerOptionItem>-lboost_system</linkerOptionItem>
+            <linkerOptionItem>-lboost_regex</linkerOptionItem>
+          </linkerLibItems>
+          <commandLine>-fopenmp</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="AbstractKnapsackAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BaseEvent.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BaseEvent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BenchmarkPrinter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChainLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Counter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Counter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CudaAcceleratedAlgorithm.cu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DispatcherCreator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DispatcherCreator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Event.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EventDispatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EventListener.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instance.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InstanceException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InstanceLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InstanceReducer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InvalidFilenameException.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="InvalidFilenameException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MatrixAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Object.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OptimalSolutionFoundException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ResizableProblemInfeasibleException.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ResizedInstance.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ResultPrinter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StreamLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SwapVectorsAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ThrustAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
